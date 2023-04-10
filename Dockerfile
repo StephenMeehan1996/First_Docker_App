@@ -1,19 +1,4 @@
 
-# # Use nginx to serve the application ##
-# FROM nginx:alpine
-
-# ## Remove default nginx website  
-# RUN rm -rf /usr/share/nginx/html/*
-
-# ## Copy over the artifacts in dist folder to default nginx public folder  
-# COPY /dist/first-docker /usr/share/nginx/html
-
-# ## nginx will run in the forground  
-# CMD [ "nginx", "-g", "daemon off;" ]
-
-
-
-# need to use the specific version of node that is dist is built 
 FROM node:18.13.0 AS builder
 
 WORKDIR /first-docker
